@@ -15,10 +15,41 @@
   <link rel="stylesheet" href="base.css">
   <link rel="stylesheet" href="layout.css">
   <link rel="stylesheet" href="components.css">
+  <link rel="stylesheet" href="navigation.css">
 </head>
 <body>
   
-  <div class="kn-page">
+  <!-- Navigation Bar -->
+  <nav class="kn-nav">
+    <div class="kn-nav__container">
+      <div class="kn-nav__brand">Job Notification Tracker</div>
+      
+      <button class="kn-nav__toggle" id="menu-toggle" aria-label="Toggle menu">
+        <span class="kn-nav__toggle-bar"></span>
+        <span class="kn-nav__toggle-bar"></span>
+        <span class="kn-nav__toggle-bar"></span>
+      </button>
+      
+      <div class="kn-nav__links" id="nav-links">
+        <a class="kn-nav__link" data-route="/dashboard">Dashboard</a>
+        <a class="kn-nav__link" data-route="/saved">Saved</a>
+        <a class="kn-nav__link" data-route="/digest">Digest</a>
+        <a class="kn-nav__link" data-route="/settings">Settings</a>
+        <a class="kn-nav__link" data-route="/proof">Proof</a>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Route Content -->
+  <div class="kn-route-content" id="route-content">
+    <!-- Content will be dynamically loaded here -->
+  </div>
+  
+  <!-- Router Script -->
+  <script src="app.js"></script>
+  
+</body>
+</html>
     
     <!-- TOP BAR -->
     <header class="kn-topbar">
